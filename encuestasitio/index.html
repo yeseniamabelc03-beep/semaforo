@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visita Cotopaxi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-base: #a855f7;
+            --color-acento: #7c3aed;
+            --color-texto: #3b0764;
+            --color-texto-fuerte: #2e1065;
+            --color-fondo: #f5f0ff;
+            --color-fondo-suave: #ede9fe;
+            --color-fondo-tenue: #faf5ff;
+            --color-borde: #d8b4fe;
+            --color-enfoque: #c084fc;
+            --color-contraste: #ffffff;
+            --radio-borde: 0.5rem;
+            --espacio: 1rem;
+        }
+
+        body {
+           
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--color-fondo);
+        }
+
+        .marca {
+            color: var(--color-texto-fuerte);
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .portada {
+            background: linear-gradient(90deg, #794b8b, var(--color-texto));
+            color: var(--color-contraste);
+            padding: 80px 20px;
+            
+        }
+
+        .boton-portada {
+            background-color: var(--color-base);
+            color: var(--color-contraste);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        .boton-portada:hover {
+            background-color: var(--color-acento);
+            color: var(--color-contraste);
+        }
+
+        .seccion {
+            padding: 45px 0;
+            
+        }
+
+        .titulo {
+            color: var(--color-texto-fuerte);
+            font-weight: bold;
+        }
+
+        .tarjeta {
+            background-color: var(--color-contraste);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 15px var(--color-borde);
+            
+        }
+
+        .pregunta {
+            color: var(--color-texto);
+            font-weight: bold;
+        }
+
+        .campo {
+            margin-bottom: 18px;
+        }
+
+        .grupo-opciones {
+            background-color: var(--color-fondo-tenue);
+            padding: 15px;
+            border-radius: var(--radio-borde);
+            margin-bottom: 18px;
+            border: 1px solid var(--color-fondo-suave);
+        }
+
+        .boton-enviar {
+            background-color: var(--color-acento);
+            color: var(--color-contraste);
+            border: none;
+            padding: 12px;
+            border-radius: var(--radio-borde);
+            width: 100%;
+        }
+
+        .boton-enviar:hover {
+            background-color: var(--color-texto);
+            color: var(--color-contraste);
+        }
+
+        .parque {
+            background-color: var(--color-fondo-suave);
+            border-radius: 12px;
+            padding: 25px;
+            
+        }
+
+        .atractivo {
+            color: rgb(121, 29, 145);
+            opacity: 0.9;
+        }
+        .card {
+            background-color: rgba(159, 69, 211, 0.336);
+           
+            border-radius: 15px;
+            opacity: 0.5;
+        }
+
+        .pie {
+            background-color: var(--color-texto-fuerte);
+            color: var(--color-contraste);
+            padding: 25px;
+            text-align: center;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: var(--color-enfoque);
+            box-shadow: 0 0 0 3px var(--color-fondo-suave);
+        }
+
+        .form-check-input:checked {
+            background-color: var(--color-acento);
+            border-color: var(--color-acento);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg menu">
+        <div class="container">
+            <a class="navbar-brand marca" href="#inicio">🏔 Cotopaxi</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="portada" id="inicio">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1 class="display-4 fw-bold">¡Vive la aventura en Cotopaxi!</h1>
+                    <p class="lead">
+                        Conoce uno de los lugares más impresionantes del Ecuador,
+                        disfruta de sus paisajes y comparte tu experiencia.
+                    </p>
+                </div>
+
+                <div class="col-lg-5 mt-4">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80"
+                         class="img-fluid rounded-4"
+                         alt="Paisaje de montañas">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="seccion" id="parque">
+        <div class="container">
+            <div class="parque">
+                <h2 class="titulo">Conoce el Parque Nacional Cotopaxi</h2>
+                <p>
+                    El Parque Nacional Cotopaxi es uno de los destinos naturales
+                    más conocidos del Ecuador. Sus paisajes y montañas atraen
+                    a visitantes que desean disfrutar de la naturaleza.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion" id="atractivos">
+        <div class="container">
+            <h2 class="titulo text-center mb-4">Descubre sus atractivos</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card atractivo h-100 border-0 shadow">
+                        <div class="card-body text-center">
+                            <h1>🏔️</h1>
+                            <h5 class="atractivo">Volcán Cotopaxi</h5>
+                            <p>Admira sus paisajes y su imponente presencia.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card atractivo border-0 shadow">
+                        <div class="card-body text-center">
+                            <h1>🥾</h1>
+                            <h5 class="atractivo">Senderos</h5>
+                            <p>Explora los caminos y disfruta del entorno natural.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card atractivo border-0 shadow">
+                        <div class="card-body text-center">
+                            <h1>📷</h1>
+                            <h5 class="atractivo">Paisajes</h5>
+                            <p>Observa la naturaleza y captura recuerdos de tu visita.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion" id="encuesta">
+        <div class="container">
+            <div class="tarjeta">
+                <h2 class="titulo text-center">Encuesta visita Cotopaxi</h2>
+                <p class="text-center text-secondary">
+                    Tu opinión es importante para mejorar la experiencia turística.
+                </p>
+
+                <form>
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <div class="campo">
+                                <label for="nombre" class="pregunta form-label">Ingrese su nombre:</label>
+                                <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Escriba su nombre">
+                            </div>
+
+                            <div class="campo">
+                                <label for="nacionalidad" class="pregunta form-label">Ingrese su nacionalidad:</label>
+                                <input type="text" id="nacionalidad" name="nacionalidad" class="form-control" placeholder="Escriba su nacionalidad">
+                            </div>
+
+                            <div class="campo">
+                                <label for="transporte" class="pregunta form-label">¿Qué medio de transporte utilizó?</label>
+                                <select id="transporte" name="transporte" class="form-select">
+                                    <option value="">Seleccione una opción</option>
+                                    <option value="propio">Vehículo propio</option>
+                                    <option value="publico">Transporte público</option>
+                                    <option value="turistico">Transporte turístico</option>
+                                </select>
+                            </div>
+
+                            <div class="grupo-opciones">
+                                <p class="pregunta">¿Con quién realiza la visita?</p>
+
+                                <div class="form-check">
+                                    <input type="radio" id="pareja" name="acompanante" value="pareja" class="form-check-input">
+                                    <label for="pareja" class="form-check-label">Pareja</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input type="radio" id="solo" name="acompanante" value="solo" class="form-check-input">
+                                    <label for="solo" class="form-check-label">Solo</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input type="radio" id="familia" name="acompanante" value="familia" class="form-check-input">
+                                    <label for="familia" class="form-check-label">Familia</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input type="radio" id="amigos" name="acompanante" value="amigos" class="form-check-input">
+                                    <label for="amigos" class="form-check-label">Amigos</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input type="radio" id="grupo" name="acompanante" value="grupo" class="form-check-input">
+                                    <label for="grupo" class="form-check-label">Grupo organizado</label>
+                                </div>
+                            </div>
+
+                            <div class="grupo-opciones">
+                                <p class="pregunta">¿Qué atractivos turísticos visitó?</p>
+
+                                <div class="form-check">
+                                    <input type="checkbox" id="volcan" name="atractivos" value="volcan" class="form-check-input">
+                                    <label for="volcan" class="form-check-label">Volcán Cotopaxi</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input type="checkbox" id="laguna" name="atractivos" value="laguna" class="form-check-input">
+                                    <label for="laguna" class="form-check-label">Laguna</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input type="checkbox" id="refugio" name="atractivos" value="refugio" class="form-check-input">
+                                    <label for="refugio" class="form-check-label">Refugio</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input type="checkbox" id="senderos" name="atractivos" value="senderos" class="form-check-input">
+                                    <label for="senderos" class="form-check-label">Senderos</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="campo">
+                                <label for="duracion" class="pregunta form-label">¿Cuánto duró su visita?</label>
+                                <select id="duracion" name="duracion" class="form-select">
+                                    <option value="">Seleccione una opción</option>
+                                    <option value="menos de 2 horas">Menos de 2 horas</option>
+                                    <option value="2 a 4 horas">De 2 a 4 horas</option>
+                                    <option value="4 a 6 horas">De 4 a 6 horas</option>
+                                    <option value="mas de 6 horas">Más de 6 horas</option>
+                                </select>
+                            </div>
+
+                            <div class="campo">
+                                <label for="fecha" class="pregunta form-label">¿En qué fecha realizó su visita?</label>
+                                <input type="date" id="fecha" name="fecha" class="form-control">
+                            </div>
+
+                            <div class="campo">
+                                <label for="telefono" class="pregunta form-label">Ingrese su teléfono:</label>
+                                <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="0991234567" pattern="09[0-9]{8}" maxlength="10" required>
+                            </div>
+
+                            <div class="campo">
+                                <label for="calificacion" class="pregunta form-label">Califique su experiencia del 1 al 5:</label>
+                                <select id="calificacion" name="calificacion" class="form-select">
+                                    <option value="">Seleccione una calificación</option>
+                                    <option value="1">1 - Mala</option>
+                                    <option value="2">2 - Regular</option>
+                                    <option value="3">3 - Buena</option>
+                                    <option value="4">4 - Muy buena</option>
+                                    <option value="5">5 - Excelente</option>
+                                </select>
+                            </div>
+
+                            <div class="campo">
+                                <label for="correo" class="pregunta form-label">Ingrese su correo:</label>
+                                <input type="email" id="correo" name="correo" class="form-control" placeholder="ejemplo@correo.com">
+                            </div>
+
+                            <div class="campo">
+                                <label for="recomendaciones" class="pregunta form-label">Escriba sus recomendaciones:</label>
+                                <textarea id="recomendaciones" name="recomendaciones" class="form-control" rows="5" placeholder="Escriba sus recomendaciones..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="boton-enviar">Enviar encuesta</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pie">
+        <p>Disfruta de Cotopaxi y ayuda a conservar sus paisajes.</p>
+        <p class="mb-0">Gracias por compartir tu experiencia.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
